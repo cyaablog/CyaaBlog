@@ -5,34 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyaaBlog - Website Pertamaku</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
             text-align: center;
         }
-        h1 {
-            color: #24292e;
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        p {
-            color: #586069;
-            font-size: 18px;
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .welcome-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-left: 5px solid #667eea;
+        }
+
+        .welcome-box h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .welcome-box p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Bagian Postingan */
+        .posts-section {
+            margin-top: 40px;
+        }
+
+        .posts-section h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .post-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .post-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .post-card h3 a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .post-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .post-date {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .post-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👋 Selamat Datang di CyaaBlog!</h1>
-        <p>Ini adalah website pertama saya yang di-hosting di GitHub & Cloudflare Pages</p>
-        <p>Dibuat dengan ❤️</p>
+        <!-- Header -->
+        <div class="header">
+            <h1>👋 Selamat Datang di CyaaBlog!</h1>
+            <p>Website Pertama Saya di Cloudflare Pages</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="welcome-box">
+                <h2>🎉 Halo, Dunia!</h2>
+                <p>
+                    Ini adalah website pertama saya yang dibuat dengan HTML, CSS, dan JavaScript. 
+                    Website ini di-hosting menggunakan <strong>GitHub</strong> dan <strong>Cloudflare Pages</strong>.
+                </p>
+            </div>
+
+            <!-- Bagian Postingan -->
+            <div class="posts-section">
+                <h2>📝 Postingan Terbaru</h2>
+
+                <!-- Postingan 1 -->
+                <div class="post-card">
+                    <h3>
+                        <a href="postingan-pertama.html">🎉 Postingan Pertama Saya!</a>
+                    </h3>
+                    <p class="post-date">📅 Diposting pada 5 Juli 2026</p>
+                    <p class="post-excerpt">
+                        Halo semua! Selamat datang di CyaaBlog! Di postingan ini saya membahas tentang GitHub Pages 
+                        dan Cloudflare Pages. Bagaimana cara membuat website statis dengan gratis...
+                    </p>
+                    <a href="postingan-pertama.html" class="read-more">Baca selengkapnya →</a>
+                </div>
+
+                <!-- Nanti tambah postingan baru di sini -->
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Dibuat dengan ❤️ oleh <strong>CyaaBlog</strong></p>
+            <p>© 2026 - Semua hak dilindungi</p>
+        </div>
     </div>
 </body>
 </html>
